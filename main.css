@@ -1,0 +1,153 @@
+#logo{
+    margin-left: 2cm;
+}
+li{
+    float: right;
+    border-right: 10px white;
+}
+li:last-child{
+    border-right: none;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 2px;
+    overflow: hidden;
+    position: fixed;
+    top:0.3cm;
+    width: 98%;
+}
+li a{
+    display: block;
+    color: darkgray;
+    padding: 10px 10px;
+    text-align: center;
+    background-color:none;
+    text-decoration:double;
+}
+li a:hover{
+    background-color: brown;
+}
+div.gallery img {
+    float: right;
+    margin: 50px;
+    border-radius: 100px;
+}
+#home {
+    overflow: auto;
+    background-color: antiquewhite;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+nav {
+    float: left;
+    width: 70%;
+    margin-bottom: 4cm;
+}
+
+nav h1 {
+    margin-left: 4cm;
+    font-size: 60px;
+}
+nav h3{
+    margin-left: 4cm;
+    font-size:30px;
+}
+nav button{
+    background-color:#75474a;
+    color:white;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left:10px;
+    padding-right:10px;
+    margin-bottom:4cm; 
+    margin-left:20cm ;
+    margin-top: 0cm;
+}
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+  }
+#aboutus{
+    background-color: blanchedalmond;
+    margin-left: 4cm;
+    margin-top: 3cm;
+}
+#about{
+    margin-bottom: 4cm;
+}
+#reviews {
+    margin-top: 1000px;
+}
+
+.review {
+    float: left;
+    width: 40%;
+    margin-left: 1cm;
+    margin-inline-start: 1cm;
+}
+
+.review img {
+    width: 20%;
+    border-radius: 170px;
+    margin-top: 2cm;
+}
+
+.review p {
+    margin-top: 30px;
+}
+#features{
+    box-sizing: border-box;
+    border-radius: 100px;
+}
+
+#features.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    background-color: antiquewhite;
+}
+#features.row:after {
+    content: "";
+    display:table-column;
+    clear: both;
+}
+#features img{
+    border-radius: 10px;
+}
+#contact {
+    text-align: center;
+    margin-top: 50cm;
+}
+
+#contact .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact .column {
+    flex: 1;
+    padding: 20px;
+}
+
+#contact h2 {
+    font-size: 36px;
+    color: #333;
+}
+
+#contact p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+#contact img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}

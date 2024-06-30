@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Page</title>
+  <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Register</h2>
+    <form action="register.php" method="post" enctype="multipart/form-data">
+      <div class="input-group">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+      </div>
+      <div class="input-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+      </div>
+      <div class="input-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="input-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <div class="input-group">
+        <label for="photo">Upload Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required>
+      </div>
+      <div class="input-group">
+        <label for="bio">Short Bio:</label>
+        <textarea id="bio" name="bio" placeholder="Write a short bio about yourself" rows="4" required></textarea>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+    <div class="register-link">
+      <p>Already have an account? <a href="loginform.html">Login here</a></p>
+    </div>
+  </div>
+</body>
+</html>
