@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register Page</title>
-  <link rel="stylesheet" type="text/css" href="login.css">
+  <link rel="stylesheet" type="text/css" href="styless.css">
 </head>
 <body>
   <div class="login-container">
@@ -37,6 +37,14 @@
       <div class="input-group">
         <label for="bio">Short Bio:</label>
         <textarea id="bio" name="bio" placeholder="Write a short bio about yourself" rows="4" required></textarea>
+      </div>
+      <div class="input-group">
+        <label for="user_type">Register As:</label>
+        <select id="user_type" name="user_type" required>
+          <option value="Recipe Owner">Recipe Owner</option>
+          <option value="Administrator">Administrator</option>
+          <option value="User">User</option>
+        </select>
       </div>
       <button type="submit">Register</button>
     </form>

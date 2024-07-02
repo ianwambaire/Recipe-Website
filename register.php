@@ -9,9 +9,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $phone = $_POST['phone'];
     $password = $_POST['password'];
     $bio = $_POST['bio'];
+    $user_type = $_POST['user_type'];
 
     // Check if all required fields are set
-    if (!$fullname || !$username || !$email || !$phone || !$password || !$bio) {
+    if (!$fullname || !$username || !$email || !$phone || !$password || !$bio || !$user_type) {
         die("All fields are required.");
     }
 
@@ -55,8 +56,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         // Prepare the SQL statement
-        $stmt = $conn->prepare("INSERT INTO registration (fullname, username, email, phone, password, photo, bio) VALUES (?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssssss", $fullname, $username, $email, $phone, $hashed_password, $target_file, $bio);
+        $stmt = $conn->prepare("INSERT INTO registration (fullname, username, email, phone, password, photo, bio, user_type) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssssss", $fullname, $username, $email, $phone, $hashed_password, $target_file, $bio, $user_type);
         
         // Execute the statement
         if ($stmt->execute()) {
