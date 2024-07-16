@@ -1,9 +1,16 @@
 <?php
- session_start();
- if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
+session_start();
+if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
     header("Location: loginform.html");
     exit();
- }
+}
+
+// Include database connection
+include_once "datab.php";
+
+// Fetch all recipes and their owners
+$stmt = $pdo->query("SELECT recipes.*, registration.fullname AS owner_name FROM recipes INNER JOIN registration ON recipes.username = registration.username");
+$recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -22,48 +29,20 @@
     </div>
 
     <div class="cards-container">
-      
+      <?php foreach ($recipes as $recipe): ?>
       <div class="card">
-        <img src="desserts.jpg" alt="Desserts">
-        <div class="card-content">
-          <h3 class="card-title">Desserts</h3>
-          <p class="card-description">Explore delicious desserts.</p>
-        </div>
+        <a href="recipe_details.php?id=<?php echo $recipe['id']; ?>" class="recipe-link">
+          <img src="<?php echo htmlspecialchars($recipe['recipe_photo']); ?>" alt="Recipe Photo">
+          <div class="card-content">
+            <h3 class="card-title"><?php echo htmlspecialchars($recipe['recipe_name']); ?></h3>
+          </div>
+        </a>
       </div>
-
-      
-      <div class="card">
-        <img src="course_meals.jpg" alt="Course Meals">
-        <div class="card-content">
-          <h3 class="card-title">Course Meals</h3>
-          <p class="card-description">Discover hearty course meals.</p>
-        </div>
-      </div>
-
-      
-      <div class="card">
-        <img src="appetizers.jpg" alt="Appetizers">
-        <div class="card-content">
-          <h3 class="card-title">Appetizers</h3>
-          <p class="card-description">Find tasty appetizers.</p>
-        </div>
-      </div>
-
-      
-      <div class="card">
-        <img src="drinks.jpg" alt="Drinks">
-        <div class="card-content">
-          <h3 class="card-title">Drinks</h3>
-          <p class="card-description">Enjoy refreshing drinks.</p>
-        </div>
-      </div>
-
-      
-
+      <?php endforeach; ?>
     </div>
 
     <div class="footer">
-      <a href="logout.php">Logout</a>
+      <p>&copy; <?php echo date('Y'); ?> All rights reserved.</p>
     </div>
   </div>
 </body>

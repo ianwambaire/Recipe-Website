@@ -1,5 +1,5 @@
 body {
-    background-color:antiquewhite;
+    background-color:bisque;
     color: #333;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,7 +9,7 @@ body {
 .dashboard-container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: bisque;
+    background-color: blanchedalmond;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -34,45 +34,44 @@ body {
     color: #666;
 }
 
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+.recipe-details {
+    margin-bottom: 20px;
 }
 
-.card {
+.recipe-card {
     background-color:burlywood;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.3s ease;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.recipe-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
-
-.card img {
-    width: 100%;
-    height: 150px; /* Adjust the height of the image */
-    object-fit: cover;
+.recipe-card img {
+    width: 40%;
+    height: 40%;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
 
 .card-content {
-    padding: 15px;
+    padding: 20px;
 }
 
 .card-title {
-    font-size: 18px;
-    margin: 0;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.card-owner {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 20px;
 }
 
 .footer {
@@ -80,4 +79,14 @@ body {
     margin-top: 20px;
     font-size: 12px;
     color: #666;
+}
+
+.footer a {
+    margin-right: 10px;
+    color: #666;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }

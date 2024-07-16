@@ -1,31 +1,31 @@
-#logo{
+#logo {
     margin-left: 2cm;
 }
-li{
+li {
     float: right;
     border-right: 10px white;
 }
-li:last-child{
+li:last-child {
     border-right: none;
 }
-ul{
+ul {
     list-style-type: none;
     margin: 0;
     padding: 2px;
     overflow: hidden;
     position: fixed;
-    top:0.3cm;
+    top: 0.3cm;
     width: 98%;
 }
-li a{
+li a {
     display: block;
     color: darkgray;
     padding: 10px 10px;
     text-align: center;
-    background-color:none;
-    text-decoration:double;
+    background-color: none;
+    text-decoration: double;
 }
-li a:hover{
+li a:hover {
     background-color: brown;
 }
 div.gallery img {
@@ -40,114 +40,184 @@ div.gallery img {
     height: 100%;
     width: 100%;
 }
-
 nav {
     float: left;
     width: 70%;
     margin-bottom: 4cm;
 }
-
 nav h1 {
     margin-left: 4cm;
     font-size: 60px;
 }
-nav h3{
+nav h3 {
     margin-left: 4cm;
-    font-size:30px;
+    font-size: 30px;
 }
-nav button{
-    background-color:#75474a;
-    color:white;
+nav button {
+    background-color: #75474a;
+    color: white;
     padding-bottom: 10px;
     padding-top: 10px;
-    padding-left:10px;
-    padding-right:10px;
-    margin-bottom:4cm; 
-    margin-left:20cm ;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 20cm;
     margin-top: 0cm;
 }
 .column {
     float: left;
     width: 33.33%;
     padding: 15px;
-  }
-#aboutus{
+}
+#aboutus {
     background-color: blanchedalmond;
     margin-left: 4cm;
     margin-top: 3cm;
 }
-#about{
+#about {
     margin-bottom: 4cm;
 }
-#reviews {
+.review-section {
     margin-top: 1000px;
-}
-
-.review {
-    float: left;
-    width: 40%;
-    margin-left: 1cm;
-    margin-inline-start: 1cm;
-}
-
-.review img {
-    width: 20%;
-    border-radius: 170px;
-    margin-top: 2cm;
-}
-
-.review p {
-    margin-top: 30px;
-}
-#features{
-    box-sizing: border-box;
-    border-radius: 100px;
-}
-
-#features.column {
-    float: left;
-    width: 25%;
-    padding: 10px;
+    padding: 20px;
     background-color: antiquewhite;
 }
-#features.row:after {
-    content: "";
-    display:table-column;
-    clear: both;
+.review-section h1 {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
-#features img{
+.review-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+}
+.review-card {
+    flex: 0 0 auto;
+    width: 250px;
+    background-color: blanchedalmond;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+.review-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.review-card h4 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+.review-card h5 {
+    font-size: 14px;
+    color: #555;
+}
+.feature-section {
+    padding: 20px;
+    background-color:antiquewhite;
+}
+.feature-section h2 {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.feature-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+}
+.feature-card {
+    flex: 0 0 auto;
+    width: 250px;
+    background-color:blanchedalmond;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+.feature-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.feature-card h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+.feature-card p {
+    font-size: 14px;
+    color: #555;
 }
 #contact {
     text-align: center;
-    margin-top: 50cm;
+    margin-top: 4cm;
 }
-
 #contact .row {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 #contact .column {
     flex: 1;
     padding: 20px;
 }
-
 #contact h2 {
     font-size: 36px;
     color: #333;
 }
-
 #contact p {
     font-size: 18px;
     color: #666;
     line-height: 1.6;
 }
-
 #contact img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
     margin-top: 20px;
+}
+.recipe-section {
+    padding: 20px;
+    background-color: antiquewhite;
+}
+
+.recipe-section h1 {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+}
+
+.recipe-card {
+    flex: 0 0 auto;
+    width: 250px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.recipe-card h4 {
+    margin: 10px 0 5px;
+    font-size: 18px;
 }

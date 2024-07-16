@@ -5,7 +5,6 @@ if (!isset($_SESSION['username']) || $_SESSION['user_type'] != 'Recipe Owner') {
     exit();
 }
 
-// Include the database connection file
 include_once "datab.php";
 
 // Fetch user details
@@ -14,7 +13,7 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute([$_SESSION['username']]);
 $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-// Handle form submission
+// Handle form submission for adding a recipe
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $recipe_name = $_POST['recipe_name'];
     $ingredients = $_POST['ingredients'];
@@ -52,7 +51,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->execute([$_SESSION['username'], $recipe_name, $ingredients, $instructions, $target_file, $category]);
 
     if ($stmt->rowCount() > 0) {
-        header("Location: owner_dashboard.php");
+        // Redirect to view recipes page after successful addition
+        header("Location: view_recipe.php");
         exit();
     } else {
         echo "Error adding recipe.";
